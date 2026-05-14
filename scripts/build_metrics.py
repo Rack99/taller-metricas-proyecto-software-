@@ -91,4 +91,3 @@ metrics = {
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True) 
 OUTPUT_PATH.write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8") 
 print(json.dumps(metrics, indent=2, ensure_ascii=False)) 
-EOF 
