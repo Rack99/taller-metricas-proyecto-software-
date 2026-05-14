@@ -76,8 +76,7 @@ metrics = {
  
  
     "closed_bugs": len(closed_bugs), 
-    "average_resolution_hours": round(sum(resolution_times) / len(resolution_times), 2) if 
-resolution_times else 0, 
+    "average_resolution_hours": round(sum(resolution_times) / len(resolution_times), 2) if resolution_times else 0, 
     "estimated_hours": estimated_hours, 
     "actual_hours": actual_hours, 
     "estimated_cost_usd": estimated_cost, 
@@ -86,8 +85,7 @@ resolution_times else 0,
     "roi_percent": round(roi, 2), 
     "velocity_story_points": closed_story_points, 
     "overdue_open_issues": len(overdue), 
-    "risk_level": "Alto" if len(overdue) >= 2 or len(open_bugs) >= 2 else "Medio" if len(overdue) == 1 
-or len(open_bugs) == 1 else "Bajo" 
+    "risk_level": "Alto" if len(overdue) >= 2 or len(open_bugs) >= 2 else "Medio" if len(overdue) == 1 or len(open_bugs) == 1 else "Bajo" 
 } 
  
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True) 

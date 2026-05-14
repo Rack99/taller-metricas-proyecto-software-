@@ -30,13 +30,13 @@ number,title,body,labels,state,createdAt,closedAt,updatedAt,url > data/issues.js
  
       - name: Calcular métricas 
         run: python scripts/build_metrics.py 
- 
       - name: Guardar métricas generadas 
         run: | 
           git config user.name "github-actions[bot]" 
           git config user.email "github-actions[bot]@users.noreply.github.com" 
           git add data/issues.json docs/metrics.json 
-          git commit -m "chore: actualizar métricas automáticas" || echo "No hay cambios para 
-confirmar" 
+          git commit -m "chore: actualizar métricas automáticas" || echo "No hay cambios para confirmar" 
           git push 
-EOF 
+
+          EOF
+          
